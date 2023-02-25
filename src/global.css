@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
+
+body {
+  padding: 20px 80px;
+  background-color: rgb(63, 62, 124);
+  font-family: "Itim", sans-serif;
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    padding: 20px 30px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  body {
+    padding: 20px 450px;
+  }
+}
