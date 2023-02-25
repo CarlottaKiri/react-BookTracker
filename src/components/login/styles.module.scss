@@ -1,49 +1,59 @@
-.main {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgb(243, 243, 255);
+.Container {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  gap: 0px;
-  padding: 40px;
-  height: 200px;
-  border-radius: 20px;
-  color: rgb(127, 98, 255);
-  form {
+  justify-content: center;
+  width: 100%;
+
+  height: 100vh;
+  img {
+    width: 500px;
+
+    z-index: -2;
+  }
+  .main {
+    margin-right: 140px;
+    background-color: rgb(243, 243, 255);
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    p {
-      margin-bottom: 2px;
-    }
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0px;
+    padding: 40px;
+    height: 200px;
+    border-radius: 20px;
+    color: rgb(127, 98, 255);
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      p {
+        margin-bottom: 2px;
+      }
 
-    .name {
-      text-align: center;
-      border: 2px dotted rgb(147, 147, 255);
-      border-radius: 10px;
-    }
+      .name {
+        text-align: center;
+        border: 2px dotted rgb(147, 147, 255);
+        border-radius: 10px;
+      }
 
-    .button {
-      border: none;
-      background-color: rgb(196, 183, 255);
-      padding: 8px 0px;
-      border-radius: 10px;
-    }
+      .button {
+        border: none;
+        background-color: rgb(196, 183, 255);
+        padding: 8px 0px;
+        border-radius: 10px;
+      }
 
-    .button:hover {
-      cursor: pointer;
-      transform: scale(1.06);
+      .button:hover {
+        cursor: pointer;
+        transform: scale(1.06);
+      }
     }
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s; /* Firefox < 16 */
+    -ms-animation: fadein 2s; /* Internet Explorer */
+    -o-animation: fadein 2s; /* Opera < 12.1 */
+    animation: fadein 2s;
   }
-  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 2s; /* Firefox < 16 */
-  -ms-animation: fadein 2s; /* Internet Explorer */
-  -o-animation: fadein 2s; /* Opera < 12.1 */
-  animation: fadein 2s;
 }
 
 @keyframes fadein {
