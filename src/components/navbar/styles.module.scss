@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
 .main {
   display: flex;
   padding: 10px;
@@ -10,6 +12,7 @@
     gap: 10px;
     h1 {
       margin: 0;
+      font-family: "Pacifico", sans-serif;
     }
     .img {
       width: 50px;
@@ -60,6 +63,20 @@
   -ms-animation: fadein 4s; /* Internet Explorer */
   -o-animation: fadein 4s; /* Opera < 12.1 */
   animation: fadein 4s;
+}
+
+@media screen and (max-width: 650px) {
+  .main {
+    margin-top: 10px;
+    .info {
+      gap: 10px;
+      button {
+        .logoutImg {
+          width: 40px;
+        }
+      }
+    }
+  }
 }
 
 @keyframes fadein {

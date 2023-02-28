@@ -17,6 +17,11 @@
   -o-animation: fadein 4s; /* Opera < 12.1 */
   animation: fadein 4s;
 }
+@media screen and (max-width: 650px) {
+  .main {
+    margin: 0px 20px;
+  }
+}
 
 @keyframes fadein {
   from {

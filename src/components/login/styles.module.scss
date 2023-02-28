@@ -1,140 +1,184 @@
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
-.Logo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  .logoImg {
-    width: 150px;
-  }
-  .logoTitle {
-    font-size: 50px;
-    font-family: "Pacifico", sans-serif;
-    margin-bottom: 0;
-    letter-spacing: 4px;
-    color: rgb(198, 182, 243);
-  }
-  .logoParagraph {
-    font-size: 20px;
-    margin-top: 0;
-    color: rgb(217, 209, 240);
-  }
-  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 2s; /* Firefox < 16 */
-  -ms-animation: fadein 2s; /* Internet Explorer */
-  -o-animation: fadein 2s; /* Opera < 12.1 */
-  animation: fadein 2s;
-}
-
-.Container {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  width: 100%;
-
-  height: 100vh;
-  img {
-    width: 500px;
-
-    z-index: -2;
-  }
-  .main {
-    margin-right: 140px;
-
+.AppLogin {
+  margin-top: 30px;
+  .Logo {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 
-    padding-top: 50px;
-    height: 300px;
-    border-radius: 20px;
-    color: rgb(194, 181, 255);
-    form {
+    .logoImg {
+      width: 150px;
+    }
+    .logoTitle {
+      font-size: 50px;
+      font-family: "Pacifico", sans-serif;
+      margin-bottom: 0;
+      letter-spacing: 4px;
+      color: rgb(198, 182, 243);
+    }
+    .logoParagraph {
+      font-size: 20px;
+      margin-top: 0;
+      color: rgb(217, 209, 240);
+    }
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s; /* Firefox < 16 */
+    -ms-animation: fadein 2s; /* Internet Explorer */
+    -o-animation: fadein 2s; /* Opera < 12.1 */
+    animation: fadein 2s;
+  }
+
+  .Container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+
+    height: 100%;
+    .mobile {
+      display: none;
+    }
+    img {
+      width: 500px;
+
+      z-index: -2;
+    }
+    .main {
+      margin-right: 140px;
+
       display: flex;
       flex-direction: column;
-      gap: 40px;
+      align-items: center;
+      justify-content: center;
 
-      p {
-        margin-bottom: 2px;
+      padding-top: 50px;
+      height: 300px;
+      border-radius: 20px;
+      color: rgb(194, 181, 255);
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        input {
+          color: white;
+        }
+
+        p {
+          margin-bottom: 2px;
+        }
+
+        .name {
+          text-align: center;
+          border: 2px dotted rgb(147, 147, 255);
+          border-radius: 10px;
+          padding: 5px;
+          background-color: transparent;
+        }
+
+        .button {
+          border: none;
+          background-color: rgb(196, 183, 255);
+          padding: 8px 0px;
+          border-radius: 10px;
+          margin-top: -20px;
+          font-weight: bold;
+          color: rgb(42, 23, 97);
+        }
+
+        .button:hover {
+          cursor: pointer;
+          transform: scale(1.06);
+        }
       }
-
-      .name {
-        text-align: center;
-        border: 2px dotted rgb(147, 147, 255);
-        border-radius: 10px;
-        padding: 5px;
-        background-color: transparent;
+    }
+    -webkit-animation: fadein 10s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 10s; /* Firefox < 16 */
+    -ms-animation: fadein 4s; /* Internet Explorer */
+    -o-animation: fadein 4s; /* Opera < 12.1 */
+    animation: fadein 4s;
+  }
+  @media screen and (max-width: 650px) {
+    .AppLogin {
+      margin-top: 0;
+      width: 100%;
+      background-color: #000044;
+    }
+    h1 {
+      margin-top: -20px;
+      color: rgb(226, 215, 255);
+    }
+    .Container {
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      overflow: hidden;
+      .main {
+        margin: -16px 0px 0px 0px;
+        padding-top: 0;
       }
-
-      .button {
-        border: none;
-        background-color: rgb(196, 183, 255);
-        padding: 8px 0px;
-        border-radius: 10px;
-        margin-top: -20px;
-        font-weight: bold;
-        color: rgb(42, 23, 97);
+      img {
+        margin-top: -10px;
+        width: 350px;
+        display: none;
       }
-
-      .button:hover {
-        cursor: pointer;
-        transform: scale(1.06);
+      .mobileDiv {
+        display: block;
+        width: 100%;
+        height: 250px;
+        margin-top: -10px;
+        background-image: url("./mobile.gif");
+        background-size: cover;
       }
     }
   }
-  -webkit-animation: fadein 10s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 10s; /* Firefox < 16 */
-  -ms-animation: fadein 4s; /* Internet Explorer */
-  -o-animation: fadein 4s; /* Opera < 12.1 */
-  animation: fadein 4s;
-}
 
-@keyframes fadein {
-  from {
-    opacity: 0;
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
-  to {
-    opacity: 1;
-  }
-}
 
-/* Firefox < 16 */
-@-moz-keyframes fadein {
-  from {
-    opacity: 0;
+  /* Firefox < 16 */
+  @-moz-keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
-  to {
-    opacity: 1;
-  }
-}
 
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadein {
-  from {
-    opacity: 0;
+  /* Safari, Chrome and Opera > 12.1 */
+  @-webkit-keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
-  to {
-    opacity: 1;
-  }
-}
 
-/* Internet Explorer */
-@-ms-keyframes fadein {
-  from {
-    opacity: 0;
+  /* Internet Explorer */
+  @-ms-keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
-  to {
-    opacity: 1;
-  }
-}
 
-/* Opera < 12.1 */
-@-o-keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
+  /* Opera < 12.1 */
+  @-o-keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 }

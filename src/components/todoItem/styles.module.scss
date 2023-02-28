@@ -95,6 +95,17 @@
   animation: fadein 2s;
 }
 
+@media screen and (max-width: 650px) {
+  .main {
+    margin: 0px 20px;
+    div {
+      h2 {
+        font-size: 22px;
+      }
+    }
+  }
+}
+
 @keyframes fadein {
   from {
     opacity: 0;

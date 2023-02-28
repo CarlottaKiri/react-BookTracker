@@ -3,6 +3,7 @@ import ApplicationCtx from "../../store/context";
 import styles from "./styles.module.scss";
 import background from "./login.gif";
 import logo from "./logo.gif";
+import mobile from "./mobile.gif";
 
 const Login = () => {
   const { dispatch } = useContext(ApplicationCtx);
@@ -14,7 +15,7 @@ const Login = () => {
   };
 
   return (
-    <>
+    <div className={styles.AppLogin}>
       <div className={styles.Logo}>
         {/* <img src={logo} className={styles.logoImg} /> */}
         <h1 className={styles.logoTitle}>BookTracker</h1>
@@ -22,6 +23,9 @@ const Login = () => {
       </div>
       <div className={styles.Container}>
         <img src={background} />
+        <div className={styles.mobileDiv}>
+          {/* <img className={styles.mobile} src={mobile} /> */}
+        </div>
         <div className={styles.main}>
           <h1 className={styles.title}>Login</h1>
           <form onSubmit={onHandleSubmit}>
@@ -35,14 +39,13 @@ const Login = () => {
                 id="username"
                 name="username"
                 placeholder="⭐"
+                autocomplete="off"
                 required
               />
               <p>Your Password:</p>
               <input
                 className={styles.name}
-                value={username}
-                onChange={(e) => setUsername(() => e.target.value)}
-                type="text"
+                type="password"
                 id="username"
                 name="username"
                 placeholder="🔒"
@@ -52,7 +55,7 @@ const Login = () => {
           </form>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
