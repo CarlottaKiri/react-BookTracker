@@ -2,6 +2,7 @@ import { useState, useContext } from "react";
 import ApplicationCtx from "../../store/context";
 import styles from "./styles.module.scss";
 import background from "./login.gif";
+import logo from "./logo.gif";
 
 const Login = () => {
   const { dispatch } = useContext(ApplicationCtx);
@@ -14,6 +15,11 @@ const Login = () => {
 
   return (
     <>
+      <div className={styles.Logo}>
+        {/* <img src={logo} className={styles.logoImg} /> */}
+        <h1 className={styles.logoTitle}>BookTracker</h1>
+        <p className={styles.logoParagraph}>Your own reading experience</p>
+      </div>
       <div className={styles.Container}>
         <img src={background} />
         <div className={styles.main}>
@@ -30,6 +36,16 @@ const Login = () => {
                 name="username"
                 placeholder="⭐"
                 required
+              />
+              <p>Your Password:</p>
+              <input
+                className={styles.name}
+                value={username}
+                onChange={(e) => setUsername(() => e.target.value)}
+                type="text"
+                id="username"
+                name="username"
+                placeholder="🔒"
               />
             </div>
             <input className={styles.button} type="submit" value="Login" />
