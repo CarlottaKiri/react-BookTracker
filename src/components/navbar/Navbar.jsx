@@ -19,7 +19,7 @@ export default function Navbar() {
       <div className={styles.info}>
         <div>
           <h3>Welcome back, </h3>
-          <h3 className={styles.dinamicName}>{state.user?.username}</h3>
+          <h3 className={styles.dinamicName}>{state.currentUser?.username}</h3>
         </div>
         <button onClick={() => onLogout()}>
           <img className={styles.logoutImg} src={logout} />

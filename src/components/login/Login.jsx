@@ -39,7 +39,7 @@ const Login = () => {
                 id="username"
                 name="username"
                 placeholder="⭐"
-                autocomplete="off"
+                autoComplete="off"
                 required
               />
               <p>Your Password:</p>

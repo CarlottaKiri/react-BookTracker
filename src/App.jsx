@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="App">
       <ApplicationCtx.Provider value={{ state, dispatch }}>
-        {JSON.stringify(state.user) === "{}" ? (
+        {JSON.stringify(state.currentUser) === "{}" ? (
           <Login />
         ) : (
           <>

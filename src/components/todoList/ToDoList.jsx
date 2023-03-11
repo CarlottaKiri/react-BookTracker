@@ -9,7 +9,7 @@ export default function ToDoList() {
   return (
     <div className={styles.main}>
       <Searchbar />
-      {context.state.user.bookList.map((item) => (
+      {context.state.currentbookList.map((item) => (
         <ToDoItem data={item} key={item.id} />
       ))}
     </div>
